@@ -87,7 +87,7 @@ class SceneMain extends Phaser.Scene {
             this.game.config.height * 0.5,
             "sprPlayer",
         );
-        console.log(this.player);
+
 
         //keybindings
         this.keyMoveUp = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Z);

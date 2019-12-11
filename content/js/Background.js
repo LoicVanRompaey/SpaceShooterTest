@@ -10,7 +10,7 @@ class ScrollingBackground {
     }
     createLayers() {
         for (var i = 0; i < 2; i++) {
-            // creating two backgrounds will allow a continuous flow giving the illusion that they are moving.
+            // twee achtergronden generaten zorgt voor de illusie van beweging
             var layer = this.scene.add.sprite(0, 0, this.key);
             layer.y = (layer.displayHeight * i);
             var flipX = Phaser.Math.Between(0, 10) >= 5 ? -1 : 1;

@@ -32,7 +32,7 @@ class Player extends Entity {
 
     /* resetPlayer() { //TODO debug respawn
         this.shipIsInvulnerable = true;
-        this.sprite.reset(this.x, this.y); // undefined error hier
+        this.sprite.reset(this.x, this.y); // undefined error voor 'sprite' hier
         game.time.events.add(Phaser.Timer.SECOND * this.resetTime, this.shipReady(), this);
         game.time.events.repeat(Phaser.Timer.SECOND * this.blinkDelay, this.resetTime / this.blinkDelay,
             this.shipBlink(), this);
@@ -51,7 +51,7 @@ class Player extends Entity {
     onDestroy() {
 
 
-        this.scene.time.addEvent({ // go to game over scene
+        this.scene.time.addEvent({
             delay: 1000,
             callback: function () {
                 this.scene.scene.start("SceneGameOver");
@@ -71,12 +71,12 @@ class Player extends Entity {
 
         if (this.getData("isShooting")) {
             if (this.getData("timerShootTick") < this.getData("timerShootDelay")) {
-                this.setData("timerShootTick", this.getData("timerShootTick") + 1); // every game update, increase timerShootTick by one until we reach the value of timerShootDelay
-            } else { // when the "manual timer" is triggered:
+                this.setData("timerShootTick", this.getData("timerShootTick") + 1);
+            } else {
                 var laser = new PlayerLaser(this.scene, this.x, this.y);
                 this.scene.playerLasers.add(laser);
 
-                this.scene.sfx.laser.play(); // play the laser sound effect
+                this.scene.sfx.laser.play(); // pew pew
                 this.setData("timerShootTick", 0);
             }
         }
