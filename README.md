@@ -1,14 +1,15 @@
 # SpaceShooterTest
 
-Controls :
+Controls : <br>
 
-Up :     Z
-Down:    S
-Left:    Q
-Right:   D
+Up :     Z <br>
+Down:    S <br>
+Left:    Q <br>
+Right:   D <br>
 Shoot:   SPACEBAR
-
-About
+<br>
+<br>
+About : <br>
 A first attempt to work with the Phaser framework, and one that taught me a lot. I'm particularly proud of making the ChaserShip chase the player when in a specific distance and the moving background.
 
 TODO :
